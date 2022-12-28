@@ -95,7 +95,7 @@ class Dingtalk:
         }
         '''
         message_json = json.dumps(message)
-        proxies = {"proxy": 'http://mlj:mlj123456@120.79.183.166:9001'}
+        proxies = setting.dingtalk_proxy
         errcode = ''
 
         try:

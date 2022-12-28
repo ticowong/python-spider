@@ -102,5 +102,5 @@ class DataBase:
 
 
 if __name__ == "__main__":
-    tmp = DataBase().one("mansys", "select * from ms_cookie limit 1")
+    tmp = DataBase().one("sample", "select * from ms_cookie limit 1")
     logging.info(tmp)

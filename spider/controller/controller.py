@@ -33,27 +33,6 @@ class Controller(object):
         self.queue = queue
         self.kwargs = kwargs
 
-    # async def getToken(self):
-    #     token = await Tools.get_token(f":{self.gh_id}")
-    #     if not token:
-    #         await self.refreshToken(self.gh_id)
-    #         token = await Tools.get_token(":{}".format(self.gh_id))
-    #     return token
-    #
-    # async def refreshToken(self, gh_id):
-    #     um = await UserModel().one("mljit", f"select secret from qjl_user where gh_id = \'{gh_id}\'")
-    #     if um:
-    #         secret = um[0]
-    #         response = await ApiTokenService().get(secret)
-    #         if response:
-    #             text = Tools.dict_get(response, 'text')
-    #             if text:
-    #                 jsons = json.loads(text)
-    #                 code = Tools.dict_get(jsons, 'code')
-    #                 token = Tools.dict_get(jsons, 'data')
-    #                 if code == 200:
-    #                     await Tools.set_token(":{}".format(gh_id), token)
-
     async def init(self):
         """
         队列执行入口
